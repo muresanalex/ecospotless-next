@@ -1,0 +1,23 @@
+section.about-us {
+    background: linear-gradient(135deg, #25a9e2, #00e2ff);
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+section.about-us iframe {
+    width: 100%;
+}
+
+section.about-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section.about-us p {
+    font-weight: 100;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-indent: 50px;
+}

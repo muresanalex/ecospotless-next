@@ -1,0 +1,146 @@
+nav {
+  color: #fff;
+  background-color: #000;
+  font-weight: 300;
+  height: 60px;
+}
+
+nav.fixed-navbar {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav .general-container {
+  position: relative;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav .general-container .logo {
+  display: inline-block;
+  line-height: 60px;
+  padding: 5px 0;
+}
+
+nav .general-container .logo img {
+  height: 100%;
+  max-width: 85px;
+}
+
+nav .general-container ul {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+nav.open .general-container ul {
+  display: flex;
+  z-index: 4;
+}
+
+nav .general-container ul li {
+  flex: 1 1 auto;
+  background-color: #fff;
+  border-bottom: 1px solid #aaa;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+nav.open .general-container ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav .general-container ul li a:hover {
+  color: #25a9e2;
+}
+
+nav .general-container .toggle-navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+nav .general-container .toggle-navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav .general-container .toggle-navbar a i {
+  margin-right: 20px;
+  font-size: 24px;
+  line-height: 60px;
+}
+
+.toggle-navbar .container {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.toggle-navbar .bar1,
+.toggle-navbar .bar2,
+.toggle-navbar .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+nav.open .toggle-navbar .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+  transform: rotate(-45deg) translate(-9px, 7px);
+}
+nav.open .toggle-navbar .bar2 {
+  opacity: 0;
+}
+nav.open .toggle-navbar .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -7px);
+  transform: rotate(45deg) translate(-8px, -7px);
+}
+
+.navbar-placeholder {
+  height: 60px;
+  display: none;
+}
+
+.navbar-placeholder.show {
+  display: block;
+}
+
+@media screen and (min-width: 1000px) {
+  nav .general-container ul {
+    position: static;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  nav .general-container ul li {
+    border: none;
+    background-color: transparent;
+    flex: none;
+    line-height: 60px;
+  }
+
+  nav .general-container ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  nav .general-container .toggle-navbar {
+    display: none;
+  }
+}
