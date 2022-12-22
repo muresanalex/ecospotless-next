@@ -1,9 +1,9 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useEffect } from "react";
 
 const AboutUsSection = () => {
   const iframeRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     function setIframeHeight() {
       var ratio = 500 / 280;
       var width = iframeRef.current.getBoundingClientRect().width;

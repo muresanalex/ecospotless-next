@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const TechnologiesSection = () => {
@@ -8,7 +8,7 @@ const TechnologiesSection = () => {
     detergenti: false,
   });
   const technologiesRef = useRef(null);
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (
       imagesLoaded.wetCleaning &&
       imagesLoaded.ecoFriendly &&
@@ -25,13 +25,16 @@ const TechnologiesSection = () => {
           );
           const imageSection = technology.querySelector(".image-section");
           const image = technology.querySelector("img");
-          const imageHeight = image.getBoundingClientRect().height;
+          const imageHeight =
+            image.getBoundingClientRect().height > 343
+              ? image.getBoundingClientRect().height
+              : 343;
 
           imageSection.style.height = imageHeight + "px";
 
           triangles.forEach(function (triangle) {
-            const classes = triangle.className;
-            if (classes.indexOf("top") > -1) {
+            const classNames = triangle.className;
+            if (classNames.indexOf("top") > -1) {
               const borderTop = imageHeight / 2 + "px solid #fff";
               triangle.style.borderTop = borderTop;
             } else {
@@ -50,24 +53,24 @@ const TechnologiesSection = () => {
   }, [imagesLoaded]);
 
   return (
-    <section class="general-container technologies-section" id="technology">
+    <section className="general-container technologies-section" id="technology">
       <h2>Tehnologii</h2>
-      <div class="technologies" ref={technologiesRef}>
-        <div class="technology">
-          <div class="image-section">
-            <div class="triangle top-right-triangle"></div>
-            <div class="triangle bottom-right-triangle"></div>
+      <div className="technologies" ref={technologiesRef}>
+        <div className="technology">
+          <div className="image-section">
+            <div className="triangle top-right-triangle"></div>
+            <div className="triangle bottom-right-triangle"></div>
             <Image
               onLoad={() => {
                 setImagesLoaded((state) => ({ ...state, wetCleaning: true }));
               }}
-              width="100%"
-              height="auto"
-              srcset="/wet-cleaning-mobile.jpg 769w, /wet-cleaning-tablet.jpg 959w"
+              fill
+              src="/wet-cleaning-tablet.jpg"
               alt="wet cleaning"
+              style={{ objectFit: "cover" }}
             />
           </div>
-          <article class="text-section">
+          <article className="text-section">
             <h3>Wet cleaning</h3>
             <p>
               Ca o constianta la curatatoria chimica, Grupul Electrolux Laundry
@@ -77,8 +80,8 @@ const TechnologiesSection = () => {
             </p>
           </article>
         </div>
-        <div class="technology">
-          <article class="text-section">
+        <div className="technology">
+          <article className="text-section">
             <h3>Eco friendly</h3>
             <p>
               Sistemul de curatatre umeda Electrolux lagoon® Advanced Care se
@@ -89,35 +92,35 @@ const TechnologiesSection = () => {
               delicate in mai putin de o ora.
             </p>
           </article>
-          <div class="image-section">
-            <div class="triangle top-left-triangle"></div>
-            <div class="triangle bottom-left-triangle"></div>
+          <div className="image-section">
+            <div className="triangle top-left-triangle"></div>
+            <div className="triangle bottom-left-triangle"></div>
             <Image
               onLoad={() => {
                 setImagesLoaded((state) => ({ ...state, ecoFriendly: true }));
               }}
-              width="100%"
-              height="auto"
-              srcset="/eco-friendly-mobile.jpg 769w, /eco-friendly-tablet.jpg 959w"
+              src="/eco-friendly-tablet.jpg"
               alt="eco friendly"
+              style={{ objectFit: "cover" }}
+              fill
             />
           </div>
         </div>
-        <div class="technology">
-          <div class="image-section">
-            <div class="triangle top-right-triangle"></div>
-            <div class="triangle bottom-right-triangle"></div>
+        <div className="technology">
+          <div className="image-section">
+            <div className="triangle top-right-triangle"></div>
+            <div className="triangle bottom-right-triangle"></div>
             <Image
               onLoad={() => {
                 setImagesLoaded((state) => ({ ...state, detergenti: true }));
               }}
-              width="100%"
-              height="auto"
-              srcset="/detergenti-mobile.jpg 769w, /detergenti-tablet.jpg 959w"
+              src="/detergenti-tablet.jpg"
               alt="detergenti"
+              fill
+              style={{ objectFit: "cover" }}
             />
           </div>
-          <article class="text-section">
+          <article className="text-section">
             <h3>Detergenti</h3>
             <p>
               Gama de detergenti pe care o folosim este ECOLAB (unul din liderii

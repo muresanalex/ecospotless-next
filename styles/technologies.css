@@ -1,127 +1,128 @@
 .technologies-section {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .technologies-section h2 {
-    color: #25a9e2;
-    text-align: center;
-    margin-bottom: 40px;
+  color: #25a9e2;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .technologies {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
 }
 
 .technologies .technology {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
 }
 
 .technologies .technology .image-section {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 }
 
 .technologies .technology .image-section .triangle {
-    position: absolute;
-    width: 0;
-    height: 0;
-    display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  display: none;
+  z-index: 1;
 }
 
 .technologies .technology .image-section .top-left-triangle {
-    top: 0;
-    left: 0;
-    border-right: 140px solid transparent;
+  top: 0;
+  left: 0;
+  border-right: 140px solid transparent;
 }
 
 .technologies .technology .image-section .top-right-triangle {
-    top: 0;
-    right: 0;
-    border-left: 140px solid transparent;
+  top: 0;
+  right: 0;
+  border-left: 140px solid transparent;
 }
 
 .technologies .technology .image-section .bottom-left-triangle {
-    bottom: 0;
-    left: 0;
-    border-right: 140px solid transparent;
+  bottom: 0;
+  left: 0;
+  border-right: 140px solid transparent;
 }
 
 .technologies .technology .image-section .bottom-right-triangle {
-    bottom: 0;
-    right: 0;
-    border-left: 140px solid transparent;
+  bottom: 0;
+  right: 0;
+  border-left: 140px solid transparent;
 }
 
 .technologies .technology .image-section img {
-    width: 100%;
+  width: 100%;
 }
 
 .technologies .technology .text-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px 10px 30px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #25a9e2;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 10px 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #25a9e2;
 }
 
 .technologies .technology .text-section h3 {
-    text-align: center;
-    color: #25a9e2;
-    font-size: 20px;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #25a9e2;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .technologies .technology .text-section p {
-    font-weight: 100;
-    font-size: 16px;
-    text-align: justify;
+  font-weight: 100;
+  font-size: 16px;
+  text-align: justify;
 }
 
 .technologies .technology:nth-child(2) .text-section {
-    order: 2;
+  order: 2;
 }
 
 .technologies .technology:nth-child(2) .image-section {
-    order: 1;
+  order: 1;
 }
 
 @media screen and (min-width: 666px) {
-    .technologies .technology {
-        flex-direction: row;
-    }
+  .technologies .technology {
+    flex-direction: row;
+  }
 
-    .technologies .technology .text-section {
-        padding-top: 0;
-        border: none;
-    }
+  .technologies .technology .text-section {
+    padding-top: 0;
+    border: none;
+  }
 
-    .technologies .technology .image-section {
-        width: 60%;
-    }
+  .technologies .technology .image-section {
+    width: 60%;
+  }
 
-    .technologies .technology .image-section .triangle {
-        display: block;
-    }
+  .technologies .technology .image-section .triangle {
+    display: block;
+  }
 
-    .technologies .technology .text-section h3 {
-        text-align: right;
-    }
+  .technologies .technology .text-section h3 {
+    text-align: right;
+  }
 
-    .technologies .technology .text-section:nth-child(1) h3 {
-        text-align: left;
-    }
+  .technologies .technology .text-section:nth-child(1) h3 {
+    text-align: left;
+  }
 
-    .technologies .technology:nth-child(2) .text-section {
-        order: 1;
-    }
+  .technologies .technology:nth-child(2) .text-section {
+    order: 1;
+  }
 
-    .technologies .technology:nth-child(2) .image-section {
-        order: 2;
-    }
+  .technologies .technology:nth-child(2) .image-section {
+    order: 2;
+  }
 }

@@ -3,34 +3,34 @@ import Image from "next/image";
 
 const Footer = () => (
   <footer>
-    <div class="general-container">
-      <section class="contact">
+    <div className="general-container">
+      <section className="contact">
         <h3>Contact</h3>
         <a href="tel:+40749111079">
-          <i class="fas fa-phone-alt"></i>
+          <i className="fas fa-phone-alt"></i>
           <span>+4 0749 111 079</span>
         </a>
         <a href="mailto:spotlessbistrita@gmail.com">
-          <i class="fas fa-envelope"></i>
+          <i className="fas fa-envelope"></i>
           <span>spotlessbistrita@gmail.com</span>
         </a>
-        <div class="address">
+        <div className="address">
           <p>Sucevei, 6A</p>
           <p>Bistrita, Bistrita-Nasaud, Romania</p>
         </div>
       </section>
-      <section class="details">
+      <section className="details">
         <h3>Detalii</h3>
-        <div class="delivery">
-          <i class="fas fa-truck"></i>
+        <div className="delivery">
+          <i className="fas fa-truck"></i>
           <span>Preluare si livrare la domiciliu</span>
         </div>
-        <div class="hours">
-          <i class="far fa-clock"></i>
+        <div className="hours">
+          <i className="far fa-clock"></i>
           Luni-Vineri 8:00-18:00
         </div>
-        <div class="hours">
-          <i class="far fa-clock"></i>
+        <div className="hours">
+          <i className="far fa-clock"></i>
           Sambata 9:00-12:00
         </div>
         <h4>Urmariti-ne pe:</h4>
@@ -39,10 +39,10 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fab fa-facebook-f"></i>
+          <i className="fab fa-facebook-f"></i>
         </a>
       </section>
-      <section class="navigation">
+      <section className="navigation">
         <h3>Sectiuni</h3>
         <nav>
           <ul>
@@ -61,12 +61,12 @@ const Footer = () => (
           </ul>
         </nav>
       </section>
-      <section class="logo">
-        <a href="#" class="logo">
+      <section className="logo">
+        <a href="#" className="logo">
           <Image src="/logo.png" alt="logo" width={99} height={50} />
         </a>
         <div>
-          &copy; <span class="year"></span> Spotless. All rights reserved.
+          &copy; <span className="year"></span> Spotless. All rights reserved.
         </div>
       </section>
     </div>
