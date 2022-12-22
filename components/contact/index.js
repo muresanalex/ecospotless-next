@@ -27,7 +27,7 @@ const ContactSection = () => (
       height="450"
       frameborder="0"
       style={{ border: 0 }}
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyALBLydHZr8P1qIFZFcayMCbq89OMBGHo4&q=47.143753,24.507595"
+      src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_KEY}&q=47.143753,24.507595`}
       allowFullscreen
     ></iframe>
   </section>
