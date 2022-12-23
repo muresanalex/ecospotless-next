@@ -73,7 +73,7 @@ const TechnologiesSection = () => {
           <article className="text-section">
             <h3>Wet cleaning</h3>
             <p>
-              Ca o constianta la curatatoria chimica, Grupul Electrolux Laundry
+              Ca o varianta la curatatoria chimica, Grupul Electrolux Laundry
               System impreuna cu compania WOOLMARK a dezvoltat sistemul ecologic
               de curatare umeda Electrolux lagoon® Advanced Care. Sistemul este
               acreditat de catre Woolmark Company si Hohenstein Institutes.{" "}

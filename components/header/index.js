@@ -73,6 +73,10 @@ const Header = () => {
     setIsHamburgerOpen((currentState) => !currentState);
   }
 
+  function closeHamburger() {
+    setIsHamburgerOpen(false);
+  }
+
   useEffect(() => {
     let interval;
     let isRotatorRunning = false;
@@ -187,16 +191,16 @@ const Header = () => {
             </div>
           </div>
           <ul>
-            <li>
+            <li onClick={closeHamburger}>
               <a href="#about-us">Despre noi</a>
             </li>
-            <li>
+            <li onClick={closeHamburger}>
               <a href="#technology">Tehnologii</a>
             </li>
-            <li>
+            <li onClick={closeHamburger}>
               <a href="#prices">Preturi</a>
             </li>
-            <li>
+            <li onClick={closeHamburger}>
               <a href="#contact">Contact</a>
             </li>
           </ul>
