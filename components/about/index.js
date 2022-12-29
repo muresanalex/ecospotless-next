@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
 
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 const AboutUsSection = () => {
   return (
@@ -26,9 +26,9 @@ const AboutUsSection = () => {
           <ReactPlayer
             className="react-player"
             url="https://www.facebook.com/100063713541927/videos/344940509658120"
-            controls
             height="100%"
             width="100%"
+            controls
           />
         </div>
       </div>
