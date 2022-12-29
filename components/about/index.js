@@ -1,24 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const AboutUsSection = () => {
-  const iframeRef = useRef(null);
-
-  useEffect(() => {
-    function setIframeHeight() {
-      var ratio = 500 / 280;
-      var width = iframeRef.current.getBoundingClientRect().width;
-      var height = width / ratio;
-      iframeRef.current.style.height = height + "px";
-    }
-
-    setIframeHeight();
-    window.addEventListener("resize", setIframeHeight);
-
-    return () => {
-      window.removeEventListener("resize", setIframeHeight);
-    };
-  }, []);
-
   return (
     <section className="about-us" id="about-us">
       <div className="general-container">
@@ -37,16 +22,15 @@ const AboutUsSection = () => {
           curatare profesionist si de incredere, doar asa vei avea garantia
           celor mai bune rezultate.
         </p>
-        <iframe
-          ref={iframeRef}
-          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fspotlesslaundryspecialist%2Fvideos%2F344940509658120%2F&width=500&show_text=false&height=280&appId&mute=0"
-          style={{ border: "none", overflow: "hidden" }}
-          scrolling="no"
-          frameBorder="0"
-          allow="encrypted-media"
-          allowFullScreen={true}
-          title="Facebook video"
-        ></iframe>
+        <div className="player-wrapper">
+          <ReactPlayer
+            className="react-player"
+            url="https://www.facebook.com/100063713541927/videos/344940509658120"
+            controls
+            height="100%"
+            width="100%"
+          />
+        </div>
       </div>
     </section>
   );
