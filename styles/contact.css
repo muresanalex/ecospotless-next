@@ -1,37 +1,47 @@
 section.contact .general-container {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 section.contact .general-container h2 {
-    flex-basis: 100%;
-    margin-bottom: 10px;
+  flex-basis: 100%;
+  margin-bottom: 10px;
 }
 
 section.contact .general-container .contact-box {
-    flex-basis: 100%;
-    margin-bottom: 20px;
+  flex-basis: 100%;
+  margin-bottom: 20px;
 }
 
 section.contact .general-container .contact-box h4 {
-    font-weight: 100;
-    margin-bottom: 5px;
+  font-weight: 100;
+  margin-bottom: 5px;
 }
 
 section.contact .general-container .contact-box p {
-    color: #25a9e2;
+  color: #25a9e2;
 }
 
 section.contact .general-container .contact-box a {
-    color: #25a9e2;
-    text-decoration: none;
+  color: #25a9e2;
+  text-decoration: none;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.google-maps-wrapper {
+  width: 100%;
+  height: 450px;
 }
 
 @media screen and (min-width: 768px) {
-    section.contact .general-container .contact-box {
-        flex-basis: auto;
-        flex: 1 1 auto;
-    }
+  section.contact .general-container .contact-box {
+    flex-basis: auto;
+    flex: 1 1 auto;
+  }
 }

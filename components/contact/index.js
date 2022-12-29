@@ -1,4 +1,7 @@
 import React from "react";
+import { Wrapper } from "@googlemaps/react-wrapper";
+import Map from "../map/map";
+import Marker from "../map/marker";
 
 const ContactSection = () => (
   <section className="contact" id="contact">
@@ -21,15 +24,13 @@ const ContactSection = () => (
         </a>
       </div>
     </div>
-    <iframe
-      title="Locatia pe Google Maps"
-      width="100%"
-      height={450}
-      frameBorder="0"
-      style={{ border: 0 }}
-      src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=47.143753,24.507595`}
-      allowFullScreen
-    ></iframe>
+    <div className="google-maps-wrapper">
+      <Wrapper apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}>
+        <Map center={{ lat: 47.143753, lng: 24.507595 }} zoom={16}>
+          <Marker position={{ lat: 47.143753, lng: 24.507595 }} />
+        </Map>
+      </Wrapper>
+    </div>
   </section>
 );
 
