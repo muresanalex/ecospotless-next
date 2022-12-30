@@ -65,7 +65,7 @@ const TechnologiesSection = () => {
                 setImagesLoaded((state) => ({ ...state, wetCleaning: true }));
               }}
               fill
-              src="/wet-cleaning-tablet.jpg"
+              src="/wet-cleaning.jpg"
               alt="wet cleaning"
               style={{ objectFit: "cover" }}
             />
@@ -99,7 +99,7 @@ const TechnologiesSection = () => {
               onLoad={() => {
                 setImagesLoaded((state) => ({ ...state, ecoFriendly: true }));
               }}
-              src="/eco-friendly-tablet.jpg"
+              src="/eco-friendly.jpg"
               alt="eco friendly"
               style={{ objectFit: "cover" }}
               fill
@@ -114,7 +114,7 @@ const TechnologiesSection = () => {
               onLoad={() => {
                 setImagesLoaded((state) => ({ ...state, detergenti: true }));
               }}
-              src="/detergenti-tablet.jpg"
+              src="/detergenti.jpg"
               alt="detergenti"
               fill
               style={{ objectFit: "cover" }}
