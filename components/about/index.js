@@ -36,11 +36,10 @@ const AboutUsSection = () => {
           <div className="thumbnail-wrapper">
             <button
               onClick={() => {
-                console.log("here");
                 setShowVideoPlayer(true);
               }}
             >
-              &#9654;
+              <div className="arrow" />
             </button>
             <Image
               src="/thumbnail.jpeg"
