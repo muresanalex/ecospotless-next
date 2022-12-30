@@ -8,17 +8,17 @@ const ContactSection = () => (
     <div className="general-container">
       <h2>Ne gasiti la:</h2>
       <div className="contact-box">
-        <h4>Adresa</h4>
+        <h3>Adresa</h3>
         <p>str. Sucevei, 6A, Bistrita</p>
       </div>
       <div className="contact-box">
-        <h4>Telefon</h4>
+        <h3>Telefon</h3>
         <a href="tel:+40749111079">
           <span>+4 0749 111 079</span>
         </a>
       </div>
       <div className="contact-box">
-        <h4>E-mail</h4>
+        <h3>E-mail</h3>
         <a href="mailto:spotlessbistrita@gmail.com">
           <span>spotlessbistrita@gmail.com</span>
         </a>
