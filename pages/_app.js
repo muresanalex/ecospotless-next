@@ -12,7 +12,6 @@ import "../styles/technologies.css";
 
 const roboto = Roboto({
   weight: ["100", "300", "700"],
-  subsets: ["latin"],
 });
 
 export default function App({ Component, pageProps }) {
@@ -20,7 +19,7 @@ export default function App({ Component, pageProps }) {
     <>
       <style jsx global>{`
         * {
-          font-family: ${roboto.style.fontFamily}, sans-serif;
+          font-family: ${roboto.style.fontFamily};
         }
       `}</style>
       <Component {...pageProps} />

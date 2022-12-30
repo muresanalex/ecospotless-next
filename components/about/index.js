@@ -1,9 +1,12 @@
-import React from "react";
-import dynamic from "next/dynamic";
-
-const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 const AboutUsSection = () => {
+  const [showVideoPlayer, setShowVideoPlayer] = useState(false);
+  useEffect(() => {
+    setShowVideoPlayer(window.innerWidth > 1000);
+  }, []);
+
   return (
     <section className="about-us" id="about-us">
       <div className="general-container">
@@ -22,15 +25,31 @@ const AboutUsSection = () => {
           curatare profesionist si de incredere, doar asa vei avea garantia
           celor mai bune rezultate.
         </p>
-        <div className="player-wrapper">
-          <ReactPlayer
-            className="react-player"
-            url="https://www.facebook.com/100063713541927/videos/344940509658120"
-            height="100%"
-            width="100%"
-            controls
-          />
-        </div>
+        {showVideoPlayer && (
+          <div className="player-wrapper">
+            <video controls>
+              <source src="/about-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        )}
+        {!showVideoPlayer && (
+          <div className="thumbnail-wrapper">
+            <button
+              onClick={() => {
+                console.log("here");
+                setShowVideoPlayer(true);
+              }}
+            >
+              &#9654;
+            </button>
+            <Image
+              src="/thumbnail.jpeg"
+              alt="thumbnail"
+              style={{ objectFit: "cover" }}
+              fill
+            />
+          </div>
+        )}
       </div>
     </section>
   );
